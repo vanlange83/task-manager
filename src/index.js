@@ -6,18 +6,15 @@ const taskRouter = require('./routers/tasks')
 
 
 const port = process.env.PORT || 3000
-
-// app.use((req, res, next) => {
-//     if (req.method === 'GET') {
-//         res.send('GET requests are disabled')
-//     } else {
-//         next()
-//     }
+//multer allows for file uploads
+// const multer = require('multer')
+// const upload = multer({
+//     dest: 'images'
+// })
+// app.post('/upload', upload.single('upload'), (req, res) => {
+//     res.send()
 // })
 
-// app.use((req, res, next) => {
-//         res.status(503).send('Site under contruction')
-// })
 
 app.use(express.json())
 app.use(userRouter)
@@ -32,14 +29,6 @@ app.listen(port, () => {
 const Task = require('./models/task')
 const User = require('./models/user')
 
-// const main = async () => {
-//     // const task = await Task.findById('5c949a736838d127b41e2a9f')
-//     // await task.populate('owner').execPopulate()
-//     // console.log(task.owner)
 
-//     const user = await User.findById('5c9496bc74934e1428eeaba5')
-//     //await user.populate('tasks').execPopulate()
-//     console.log(user.tasks)
-// }
 
-// main()
+//mongod.exe --dbpath="c:\data\db"
